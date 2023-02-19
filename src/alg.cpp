@@ -12,8 +12,7 @@ bool checkPrime(uint64_t value) {
     }
     if (count_d == 2) {
         return true;
-    }
-    else {
+    } else {
         return false;
     }
 }
