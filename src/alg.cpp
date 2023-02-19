@@ -81,7 +81,6 @@ uint64_t sumPrime(uint64_t hbound) {
             arr[pos] = i;
             pos++;
         }
-
     }
     int sum = 0;
     for (int i = 0; i < hbound - 1; i++) {
