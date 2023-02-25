@@ -1,16 +1,17 @@
 // Copyright 2022 NNTU-CS
 #include <cstdint>
+#include <cmath>
 #include "alg.h"
 
 
 bool checkPrime(uint64_t value) {
     int64_t count_d = 0;
-    for (int64_t i = 1; i <= value; i++) {
+    for (int64_t i = 2; i <= std::sqrt(value); i++) {
         if (value % i == 0) {
             ++count_d;
         }
     }
-    if (count_d == 2) {
+    if (count_d == 0) {
         return true;
     } else {
         return false;
