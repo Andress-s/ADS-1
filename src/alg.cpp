@@ -67,26 +67,13 @@ uint64_t nextPrime(uint64_t value) {
     return 0;
 }
 
-uint64_t sumPrime(uint64_t hbound) {
-    const int64_t size = 10000;
-    int64_t arr[size] = { 0 };
-    int64_t pos = 0;
-    int64_t i = 0, j = 0, t = 0;
-    for (i = 0; i < 10000; i++) {
-        t = 0;
-        for (j = 1; j <= i; j++) {
-            if ((i % j) == 0) {
-                t += j;
-            }
+std::int64_t sumPrime(std::int64_t  hbound)
+{
+    std::int64_t sum = 0;
+    for (int i = 2; i < hbound; i++) {
+        if (checkPrime(i)) {
+            sum += 1;
         }
-        if (t - 1 == i) {
-            arr[pos] = i;
-            pos++;
-        }
-    }
-    int64_t sum = 0;
-    for (int64_t i = 0; i < hbound - 1; i++) {
-        sum += arr[i];
     }
     return sum;
 }
